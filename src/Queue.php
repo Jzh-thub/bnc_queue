@@ -100,7 +100,7 @@ class Queue
     public function push(?array $data = null): bool
     {
         if (!$this->job) {
-            return $this->setError('需要执行的队列类必须存在');
+            throw new \RuntimeException('需要执行的队列类必须存在');
         }
 
         $res = \think\facade\Queue::{$this->action()}(...$this->getValues($data));
@@ -111,7 +111,7 @@ class Queue
     /**
      * 清除数据 or 数据初始化
      */
-    public function clean()
+    protected function clean()
     {
         $this->secs       = 0;
         $this->data       = [];
