@@ -1,5 +1,5 @@
 <?php
-require_once './vendor/autoload.php';
+include __DIR__.'/../vendor/autoload.php';
 //立即执行
 \TpQueue\Queue::instance()->do('doJob')->job(\tests\TestJob::class)->data([1, 2, 3])->push();
 

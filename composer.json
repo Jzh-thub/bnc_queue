@@ -1,22 +1,27 @@
 {
-    "name": "blue-nest-cloud/tp-queue",
-    "description": "Chuckle",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "任我行",
-            "email": "313970140@qq.com"
-        }
-    ],
-    "require": {
-        "php": ">=7.1.0",
-        "topthink/think-queue": "^3.0"
-    },
-    "autoload": {
-        "psr-4": {"TpQueue\\": "./src"}
-    },
-    "autoload-dev": {
-        "psr-4": {"tests\\": "tests","TpQueue\\": "./src"}
+  "name": "blue-nest-cloud/bnc-queue",
+  "description": "Chuckle",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "任我行",
+      "email": "313970140@qq.com"
     }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "topthink/think-queue": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "bnc\\queue\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "bnc\\tests": "tests/",
+      "bnc\\queue\\": "src/"
+    }
+  }
 }

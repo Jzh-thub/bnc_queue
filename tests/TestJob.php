@@ -2,8 +2,7 @@
 
 namespace tests;
 
-use TpQueue\base\BaseJob;
-use TpQueue\Queue;
+use bnc\queue\base\BaseJob;
 
 class TestJob extends BaseJob
 {

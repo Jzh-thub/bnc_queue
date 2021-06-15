@@ -1,5 +1,6 @@
 <?php
-namespace TpQueue;
+
+namespace bnc\queue;
 /**
  * Class Queue
  * @method $this do(string $do) 设置任务执行方法

@@ -1,6 +1,6 @@
 <?php
 
-namespace TpQueue\base;
+namespace bnc\queue\base;
 
 use think\facade\Log;
 use think\queue\Job;

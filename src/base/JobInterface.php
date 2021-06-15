@@ -1,7 +1,7 @@
 <?php
 
 
-namespace TpQueue\base;
+namespace bnc\queue\base;
 
 
 use think\queue\Job;
