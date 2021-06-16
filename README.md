@@ -4,7 +4,7 @@
 
 ## 安装
 
-> composer require topthink/tp-queue
+> composer require blue-nest-cloud/bnc-queue
 
 ## 配置
 
