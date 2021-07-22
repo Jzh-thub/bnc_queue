@@ -20,7 +20,8 @@ class BaseJob implements JobInterface
             $errorCount = $data['errorCount'] ?? 0;//最大错误次数
             $log        = $data['log'] ?? null;
             if (method_exists($this, $action)) {
-                if ($this->{$action}(...$infoData)) {
+                $res = $this->{$action}(...$infoData);
+                if ($res === true) {
                     //删除任务
                     $job->delete();
                     //记录日志
@@ -33,7 +34,10 @@ class BaseJob implements JobInterface
                         $this->info($log);
                     } else {
                         //从新放入队列
-                        $job->release();
+                        if (is_numeric($res))
+                            $job->release($res);
+                        else $job->release();
+
                     }
                 }
             } else {
